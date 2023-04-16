@@ -57,14 +57,15 @@ function resetCanvas(){
 }
 	
 //Random Image//
-var canvas = document.getElementById("canvas");
-  var context = canvas.getContext("2d");
-  var cat = new Image();
-  cat.src = "images/cat.png";
-  cat.onload = function randomImage() {
-    context.drawImage(cat, 0, 0);
+function randomImage(){
+ 	var canvas = document.getElementById("canvas");
+  	var context = canvas.getContext("2d");
+  	var cat = new Image();
+  	cat.src = "images/cat.png";
+  	cat.onload = function() {
+    	context.drawImage(cat, 0, 0);
   };
-
+}
 </script>
 
 
