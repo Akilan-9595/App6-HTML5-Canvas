@@ -47,13 +47,24 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 function drawrectangle() {
 	var canvaselem = document.getElementById("canvas"); //html canvas to js//
 	var filledrectangle = canvaselem.getContext("2d"); //2d context for drawing on canvas//
-  filledrectangle.fillRect(50, 25, 150, 100); //actually drawing the rectangle//
+  		filledrectangle.fillRect(50, 25, 150, 100); //actually drawing the rectangle//
 }
 	
 //Reset Canvas//
 function resetCanvas(){
 	var Rcanvaselem = document.getElementById("canvas"); //html canvas to js//
-	Rcanvaselem.width = Rcanvaselem.width // sets the canvas dimensions again to clear it.//
+		Rcanvaselem.width = Rcanvaselem.width // sets the canvas dimensions again to clear it.//
+}
+	
+//Random Image//
+function randomImage(){
+	var Icanvaselem = document.getElementById("canvas");
+	var randomImage = Icanvaselem.getContext("2d");
+	var panda = new Image();
+  		panda.src = "https://www.pngmart.com/files/22/Panda-PNG-Transparent-HD-Photo.png";
+  		panda.onload = function drawpanda() {
+    		context.drawImage(panda, 0, 0);
+  };
 }
 </script>
 
@@ -106,7 +117,7 @@ function resetCanvas(){
 	
 
 <!-- image button -->
-<button id="Image"> Random Image </button>
+<button id="Image" type="button" onclick="randomImage()"> Random Image </button>
 	
 
 <!-- reset button -->
