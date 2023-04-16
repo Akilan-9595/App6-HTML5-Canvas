@@ -58,13 +58,22 @@ function resetCanvas(){
 	
 //Random Image//
 function randomImage(){
- 	var imagecanvas = document.getElementById("canvas");
-  	var rimage = imagecanvas.getContext("2d");
-  	var tree = new Image();
-  	tree.src = "https://easydrawingguides.com/wp-content/uploads/2017/02/How-to-draw-a-cartoon-tree-20.png";
+ 	var imagecanvas = document.getElementById("canvas"); //html canvas to js//
+  	var rimage = imagecanvas.getContext("2d");  //2d context for drawing on canvas//
+  	var tree = new Image(); //created new image and added var to it//
+  	tree.src = "https://easydrawingguides.com/wp-content/uploads/2017/02/How-to-draw-a-cartoon-tree-20.png"; //image source//
+	//draws tree image//
   	tree.onload = function() {
     	rimage.drawImage(tree, 0, 0, 45, 45);
   };
+}
+	
+//My Name//
+function myName(){
+	var namecanvas = document.getElementById("canvas"); //html canvas to js//
+	var name = namecanvas.getContext("2d"); //2d context for drawing on canvas//
+	name.font = "30px Comic Sans"; //text font//
+	name.fillText("Aki", 30, 100); 
 }
 </script>
 
@@ -113,7 +122,7 @@ function randomImage(){
 	
 	
 <!-- your name button -->
-<button id="YourName"> Your Name </button>
+<button id="YourName" type="button" onclick="myName()"> Your Name </button>
 	
 
 <!-- image button -->
