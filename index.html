@@ -45,15 +45,16 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	
 //Drawing a rectangle//
 function drawrectangle() {
-  global canvaselem = document.getElementById("canvas"); //html canvas to js//
-  var filledrectangle = canvaselem.getContext("2d"); //2d context for drawing on canvas//
+	var canvaselem = document.getElementById("canvas"); //html canvas to js//
+	var filledrectangle = canvaselem.getContext("2d"); //2d context for drawing on canvas//
   filledrectangle.fillRect(50, 25, 150, 100); //actually drawing the rectangle//
 }
 	
-/*Reset Canvas
+//Reset Canvas//
 function resetCanvas(){
-
-}*/
+	var Rcanvaselem = document.getElementById("canvas"); //html canvas to js//
+	Rcanvaselem.width = Rcanvaselem.width // sets the canvas dimensions again to clear it.//
+}
 </script>
 
 
@@ -109,7 +110,7 @@ function resetCanvas(){
 	
 
 <!-- reset button -->
-<button id="Reset"> Clear Canvas </button>
+<button id="Reset" type="button" onclick="resetCanvas()"> Clear Canvas </button>
 	
 
 	
