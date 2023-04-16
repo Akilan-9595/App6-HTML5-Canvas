@@ -34,8 +34,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
-//html canvas to js//
-var canvaselem = document.getElementById("canvas");
+/*html canvas to js
+var canvaselem = document.getElementById("canvas");*/
 
 //tells you when site was last modified//
 var docMod = document.lastModified; // loads last modified time stamp into docMod variable
@@ -45,8 +45,9 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	
 //Drawing a rectangle//
 function drawrectangle() {
-  var filledrectangle = canvaselem.getContext("2d");
-  filledrectangle.fillRect(50, 25, 150, 100);
+  global canvaselem = document.getElementById("canvas"); //html canvas to js//
+  var filledrectangle = canvaselem.getContext("2d"); //2d context for drawing on canvas//
+  filledrectangle.fillRect(50, 25, 150, 100); //actually drawing the rectangle//
 }
 	
 /*Reset Canvas
