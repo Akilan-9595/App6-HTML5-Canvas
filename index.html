@@ -59,11 +59,11 @@ function resetCanvas(){
 //Random Image//
 function randomImage(){
 	var Icanvaselem = document.getElementById("canvas");
-	var randomImage = Icanvaselem.getContext("2d");
+	var randomImagevar = Icanvaselem.getContext("2d");
 	var panda = new Image();
   		panda.src = "https://www.pngmart.com/files/22/Panda-PNG-Transparent-HD-Photo.png";
   		panda.onload = function() {
-    		Icanvaselem.drawImage(panda, 0, 0);
+    		randomImagevar.drawImage(panda, 0, 0);
   };
 }
 </script>
