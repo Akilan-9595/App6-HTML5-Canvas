@@ -58,12 +58,12 @@ function resetCanvas(){
 	
 //Random Image//
 function randomImage(){
- 	var canvas = document.getElementById("canvas");
-  	var context = canvas.getContext("2d");
-  	var cat = new Image();
-  	cat.src = "https://easydrawingguides.com/wp-content/uploads/2017/02/How-to-draw-a-cartoon-tree-20.png";
-  	cat.onload = function() {
-    	context.drawImage(cat, 0, 0);
+ 	var imagecanvas = document.getElementById("canvas");
+  	var rimage = imagecanvas.getContext("2d");
+  	var tree = new Image();
+  	tree.src = "https://easydrawingguides.com/wp-content/uploads/2017/02/How-to-draw-a-cartoon-tree-20.png";
+  	tree.onload = function() {
+    	rimage.drawImage(tree, 0, 0, 25, 24);
   };
 }
 </script>
