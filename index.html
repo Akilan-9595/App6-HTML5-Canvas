@@ -56,14 +56,14 @@ function resetCanvas(){
 		Rcanvaselem.width = Rcanvaselem.width // sets the canvas dimensions again to clear it.//
 }
 	
-//Random Image//
+/*Random Image
 function randomImage(){
 	var Icanvaselem = document.getElementById("canvas");
 	var randomImagevar = Icanvaselem.getContext("2d");
 	var panda = new Image();
-  		panda.src = "https://www.pngmart.com/files/22/Panda-PNG-Transparent-HD-Photo.png";
+  		panda.src = "https://png.pngtree.com/png-clipart/20190918/ourmid/pngtree-pink-watercolor-brushes-171474-png-image_1733978.jpg";
   		panda.onload = function() {
-    		randomImagevar.drawImage(panda, 0, 0);
+    		randomImagevar.drawImage(panda, 0, 0); */
   };
 }
 </script>
@@ -118,7 +118,18 @@ function randomImage(){
 
 <!-- image button -->
 <button id="Image" type="button" onclick="randomImage()"> Random Image </button>
+
+<img id="cat" src="images/cat.png" alt="sleeping cat" width="177" height="113">
+<canvas id="e" width="177" height="113"></canvas>
 	
+<script>
+window.onload = function randomImage() {
+  var canvas = document.getElementById("e");
+  var context = canvas.getContext("2d");
+  var cat = document.getElementById("cat");
+  context.drawImage(cat, 0, 0);
+};
+</script>
 
 <!-- reset button -->
 <button id="Reset" type="button" onclick="resetCanvas()"> Clear Canvas </button>
