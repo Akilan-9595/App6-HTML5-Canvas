@@ -41,8 +41,8 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	
 //Drawing a rectangle//
 function drawrectangle() {
-  var rectelem = document.getElementById("rectangle");
-  var filledrectangle = rectelem.getContext("2d");
+  var canvaselem = document.getElementById("canvas");
+  var filledrectangle = canvaselem.getContext("2d");
   filledrectangle.fillRect(50, 25, 150, 100);
 }
 </script>
@@ -91,15 +91,15 @@ function drawrectangle() {
 <button id="rectangle" type="button" onclick="drawrectangle()"> Rectangle </button>
 	
 	
-<!-- rectangle button -->
+<!-- your name button -->
 <button id="YourName"> Your Name </button>
 	
 
-<!-- rectangle button -->
+<!-- image button -->
 <button id="Image"> Random Image </button>
 	
 
-<!-- rectangle button -->
+<!-- reset button -->
 <button id="Reset"> Clear Canvas </button>
 	
 
