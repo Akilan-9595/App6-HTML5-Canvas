@@ -57,15 +57,13 @@ function resetCanvas(){
 }
 	
 //Random Image//
-function randomImage(){
-	var Icanvaselem = document.getElementById("canvas");
-	var randomImagevar = Icanvaselem.getContext("2d");
-	var panda = new Image();
-  		panda.src = "images/panda.png";
-  		panda.onload = function() {
-    		randomImagevar.drawImage(panda, 0, 0);
+window.onload = function randomImage() {
+  var c = document.getElementById("canvas");
+  var ctx = c.getContext("2d");
+  var img = document.getElementById("scream");
+  ctx.drawImage(img, 10, 10);;
   };
-		
+	
 }
 </script>
 
@@ -120,6 +118,7 @@ function randomImage(){
 <!-- image button -->
 <button id="Image" type="button" onclick="randomImage()"> Random Image </button>
 
+<img id="scream" width="220" height="277" src="img_the_scream.jpg" alt="The Scream">
 
 <!-- reset button -->
 <button id="Reset" type="button" onclick="resetCanvas()"> Clear Canvas </button>
